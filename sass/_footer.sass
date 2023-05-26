@@ -1,0 +1,64 @@
+
+.footer
+    margin: 0 10px
+    position: relative
+
+    &__container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        min-height: 100px
+        background: $color-black
+        border-radius: 25px
+        margin-bottom: 18px
+        padding: 20px 38px
+        gap: 25px
+        @media (max-width: $mobile)
+            flex-direction: column
+
+    &__logo
+        height: 25px
+
+        flex: 0 1 33.333%
+        display: flex
+        justify-content: flex-start
+        img
+            width: 95px
+            height: 100%
+            object-fit: contain
+
+    &__copy
+        display: flex
+        justify-content: center
+        gap: 20px
+        font-weight: 400
+        font-size: 13px
+        line-height: 16px
+        color: #FFFFFF
+        flex: 0 1 33.333%
+        @media (max-width: $mobile)
+            order: 3
+
+    &__info
+        flex: 0 1 33.333%
+        justify-content: flex-end
+
+.info-footer
+    display: flex
+    gap: 32px
+    align-items: center
+
+    &__mail
+        font-weight: 400
+        font-size: 13px
+        line-height: 16px
+        text-transform: lowercase
+        color: #FFFFFF
+        transition: color 0.4s
+        &:hover
+            color: $color-red
+            transition: color 0.4s
+
+    &__soc
+        display: flex
+        gap: 9px

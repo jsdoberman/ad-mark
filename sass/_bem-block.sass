@@ -1,0 +1,776 @@
+
+/* ================================================ btn-white*/
+.btn-white
+    height: 60px
+    background: #FFFFFF
+    border-radius: 22px
+    display: inline-flex
+    align-items: center
+    gap: 30px
+    padding: 0 15px 0 40px
+    cursor: pointer
+    transition: background 0.4s
+    white-space: nowrap
+
+    &:hover .btn-white__arrow
+        background: $color-black
+        transition: background 0.4s
+
+        &::before, &::after
+            background: #FFFFFF
+            transition: background 0.4s
+
+    &__text
+        font-weight: 600
+        font-size: 13px
+        line-height: 16px
+        text-transform: uppercase
+        color: $color-black
+
+    &__arrow
+        width: 30px
+        height: 30px
+        background: #F2F2F2
+        border-radius: 10px
+        position: relative
+        transition: background 0.4s
+
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            top: 50%
+            left: 50%
+            background: $color-black
+            z-index: 2
+            width: 10px
+            height: 2px
+            border-radius: 6px
+            transform: rotate(-45deg) translate(-41%, -61%)
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            top: 50%
+            left: 50%
+            background: $color-black
+            z-index: 2
+            width: 10px
+            height: 2px
+            border-radius: 6px
+            transform: rotate(-45deg) translate(4px, 4px)
+            transform: rotate(45deg) translate(-55%,0%)
+
+/* ================================================= btn-red*/
+.btn-red
+    height: 60px
+    background: $color-red
+    border-radius: 18px
+    display: inline-flex
+    align-items: center
+    gap: 30px
+    padding: 0 15px 0 40px
+    cursor: pointer
+    transition: background 0.4s
+    white-space: nowrap
+
+    &:hover .btn-red__arrow
+        background: $color-white
+        transition: background 0.4s
+
+        &::before, &::after
+            background: $color-red
+            transition: background 0.4s
+
+    &__text
+        font-weight: 600
+        font-size: 13px
+        line-height: 16px
+        text-transform: uppercase
+        color: $color-white
+
+    &__arrow
+        width: 30px
+        height: 30px
+        background: #FF5858
+        border-radius: 10px
+        position: relative
+        transition: background 0.4s
+
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            top: 50%
+            left: 50%
+            background: $color-white
+            z-index: 2
+            width: 10px
+            height: 2px
+            border-radius: 6px
+            transform: rotate(-45deg) translate(-41%, -61%)
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            top: 50%
+            left: 50%
+            background: $color-white
+            z-index: 2
+            width: 10px
+            height: 2px
+            border-radius: 6px
+            transform: rotate(-45deg) translate(4px, 4px)
+            transform: rotate(45deg) translate(-55%,0%)
+
+/* ================================================== btn-black*/
+.btn-black
+    height: 60px
+    background: $color-black
+    border-radius: 18px
+    display: inline-flex
+    align-items: center
+    gap: 30px
+    padding: 0 15px 0 40px
+    cursor: pointer
+    transition: background 0.4s
+    white-space: nowrap
+
+    &:hover .btn-black__arrow
+        background: $color-white
+        transition: background 0.4s
+
+        &::before, &::after
+            background: $color-black
+            transition: background 0.4s
+
+    &__text
+        font-weight: 600
+        font-size: 13px
+        line-height: 16px
+        text-transform: uppercase
+        color: $color-white
+
+    &__arrow
+        width: 30px
+        height: 30px
+        background: #30343A
+        border-radius: 10px
+        position: relative
+        transition: background 0.4s
+
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            top: 50%
+            left: 50%
+            background: $color-white
+            z-index: 2
+            width: 10px
+            height: 2px
+            border-radius: 6px
+            transform: rotate(-45deg) translate(-41%, -61%)
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            top: 50%
+            left: 50%
+            background: $color-white
+            z-index: 2
+            width: 10px
+            height: 2px
+            border-radius: 6px
+            transform: rotate(-45deg) translate(4px, 4px)
+            transform: rotate(45deg) translate(-55%,0%)
+
+/* ================================================== hamburger*/
+.hamburger
+    display: flex
+    gap: 8px
+    flex-direction: column
+    padding: 15px 0
+    cursor: pointer
+    transition: all 0.4s
+    &:hover .hamburger__item:nth-child(1)
+        transform: translateY(15px)
+
+    &:hover .hamburger__item:nth-child(2)
+        transform: translateY(-15px)
+
+    &__item
+        transition: all 0.4s
+        width: 60px
+        height: 3px
+        background: #fff
+        @media (max-width: 352.98px)
+            width: 40px
+
+/* ================================================== menu*/
+.menu
+    background: $color-black
+    height: 0
+    overflow: hidden
+    position: fixed
+    z-index: 1000
+    width: 100%
+    top: 0
+    left: 0
+    transition: all 0.4s
+
+    &__container
+        padding: 50px 15px 70px 15px
+        display: flex
+        flex-direction: column
+        height: 100vh
+        gap: 50px
+        position: relative
+        @media (max-width: 368.98px)
+            gap: 80px
+            padding: 42px 19px 70px 19px
+
+    &__btn
+        display: none
+        width: 260px
+        padding: 15px 15px 15px 40px
+        margin: 0 auto
+        @media (max-width: 652.98px)
+            display: flex
+
+    &__logo
+        width: 95px
+        height: 25px
+        img
+            width: 100%
+            height: 100%
+            object-fit: contain
+
+    &__footer
+        flex: 1 1 100%
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        padding-bottom: 25px
+
+    &__leng
+        display: flex
+        justify-content: space-evenly
+        align-items: center
+        width: 75px
+        height: 30px
+        background: #FFFFFF
+        border: 3px solid #fff
+        border-radius: 8px
+
+    &__leng-name
+        display: block
+        font-weight: 400
+        font-size: 16px
+        line-height: 20px
+        text-transform: uppercase
+        color: #121417
+
+        &_active
+            background: #000
+            color: #fff
+            padding: 2px
+            border-radius: 10px
+            width: 35px
+            height: 25px
+            display: flex
+            justify-content: center
+            align-items: center
+
+    &__soc
+        display: flex
+        gap: 20px
+        a
+            display: block
+            width: 22px
+            height: 22px
+
+    &__close
+        display: flex
+        justify-content: center
+        align-items: center
+        position: absolute
+        top: 20px
+        right: 15px
+        z-index: 1001
+        cursor: pointer
+        width: 60px
+        height: 60px
+        transition: all 0.9s
+        &:hover
+            transform: rotate(180deg)
+            transition: all 0.9s
+
+        span
+            height: 2px
+            width: 60px
+            background: #fff
+            position: absolute
+            &:nth-child(1)
+                transform: rotate(45deg)
+
+            &:nth-child(2)
+                transform: rotate(-45deg)
+.menu_active
+    height: 100vh
+    transition: all 0.4s
+    overflow: auto
+.main-menu
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 50px
+    @media (max-width: $mobile)
+        grid-template-columns: 1fr
+        gap: 40px
+
+    &__item
+        display: inline-flex
+        position: relative
+        transition: all 0.4s
+
+    &__number
+        position: absolute
+        border: 1px solid rgba(255, 255, 255, 0.21)
+        border-radius: 5px
+        font-weight: 500
+        font-size: 12px
+        line-height: 15px
+        color: #FFFFFF
+        padding: 3px
+        top: 9px
+        left: 9px
+
+    &__title
+        font-family: Helvetica, sans-serif
+        font-weight: 500
+        font-size: 96px
+        line-height: 120%
+        text-transform: uppercase
+        -webkit-text-fill-color: transparent
+        -webkit-text-stroke: 1px #fff
+        transition: all 0.4s
+        color: #fff
+        border: 1px solid transparent
+        padding-left: 29px
+        padding-right: 5px
+        @media (max-width: 1143.98px)
+            font-size: 66px
+        @media (max-width: 847.98px)
+            font-size: 53px
+        @media (max-width: 368.98px)
+            font-size: 42px
+
+        &:hover
+            -webkit-text-fill-color: unset
+            -webkit-text-stroke: 0px #fff
+            transition: all 0.4s
+            color: #fff
+            border-width: 2px
+            border-color: #FFFFFF
+            border-radius: 20px
+            transition: all 0.4s
+/* ==================================================.popup-contact-form*/
+.popup-contact-form
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 0
+    z-index: 900
+    background: rgba(0, 0, 0, 0.4)
+    overflow: auto
+    transition: all 0.4s
+
+    &__block
+        max-width: 1060px
+        min-height: 432px
+        background: #FFFFFF
+        border-radius: 20px
+        margin: 100px auto
+        overflow: hidden
+        padding-top: 50px
+        border: 1px solid #000
+        position: relative
+
+    &__close
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 32px
+        height: 32px
+        position: absolute
+        top: 25px
+        right: 37px
+        transition: all 0.4s
+        cursor: pointer
+        @media (max-width: 456.98px)
+            top: 10px
+            right: 10px
+
+        span
+            display: block
+            height: 2px
+            width: 32px
+            background: #000
+            position: absolute
+            &:nth-child(1)
+                transform: rotate(45deg)
+            &:nth-child(2)
+                transform: rotate(-45deg)
+        &:hover
+            transition: all 0.4s
+            transform: rotate(180deg)
+
+    &__title
+        font-weight: 500
+        font-size: 30px
+        line-height: 37px
+        text-transform: uppercase
+        color: #000000
+        text-align: center
+        margin-bottom: 46px
+
+    &__form
+
+.popup-contact-form_active
+    transition: all 0.4s
+    height: 100%
+
+.contact-form
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    min-height: 332px
+    overflow: hidden
+
+    &__wrapper
+        padding: 10px 78px
+        flex: 0 0 auto
+        display: flex
+        gap: 37px
+        flex-wrap: wrap
+        @media (max-width: 740.98px)
+            padding: 10px 38px
+        @media (max-width: 470.98px)
+            padding: 10px 18px
+
+    &__item
+        position: relative
+        flex: 1 1 270px
+        &:nth-child(4)
+            flex: 1 1 100%
+
+        &:nth-child(5)
+            display: flex
+            gap: 11px
+            align-items: center
+            input
+                width: 14px
+                height: 14px
+                background: #121417
+                border: 1px solid #000000
+                &:focus + label
+                    font-size: 13px
+                    line-height: 16px
+                    color: #121417
+            label
+                position: static
+
+        label
+            font-weight: 400
+            font-size: 13px
+            line-height: 16px
+            font-family: 'Montserrat'
+            font-style: normal
+            font-weight: 400
+            font-size: 13px
+            line-height: 16px
+            color: #333333
+            position: absolute
+            top: 0
+            left: 0
+            transition: all 0.4s
+            a
+                position: relative
+                &::after
+                    content: ''
+                    display: block
+                    width: 100%
+                    height: 1px
+                    background: #333333
+                    position: absolute
+                    left: 0
+                    bottom: -2px
+
+        input
+            border: none
+            border-bottom: 1px solid #989898
+            height: 50px
+            width: 100%
+            font-family: 'Montserrat'
+            font-style: normal
+            font-weight: 400
+            font-size: 13px
+            line-height: 16px
+            color: #121417
+            transition: all 0.4s
+            outline: none
+            &:focus + label
+                font-family: 'Montserrat'
+                font-style: normal
+                font-weight: 400
+                font-size: 9px
+                line-height: 11px
+                color: #C5C4C4
+
+        textarea
+            width: 100%
+            border: 1px solid #C5C4C4
+            border-radius: 7px
+            height: 73px
+            padding: 10px
+            font-family: 'Montserrat'
+            font-style: normal
+            font-weight: 400
+            font-size: 13px
+            line-height: 16px
+            color: #121417
+            resize: none
+            outline: none
+            &::placeholder
+                font-family: 'Montserrat'
+                font-style: normal
+                font-weight: 400
+                font-size: 13px
+                line-height: 16px
+                color: #121417
+
+    &__btn
+        background: #121417
+        //border-radius: 0px 0px 20px 20px
+        height: 65px
+        width: 100%
+        font-weight: 500
+        font-size: 16px
+        line-height: 169.1%
+        text-transform: uppercase
+        color: #FFFFFF
+
+/* ================================================ .breadcrumb*/
+
+.breadcrumb
+    position: relative
+    z-index: 5
+    margin-top: 80px
+    overflow: auto
+    scrollbar-width: none
+    &::-webkit-scrollbar
+        width: 0
+        height: 0
+
+    &__block
+        display: flex
+        gap: 25px
+
+    &__item
+        position: relative
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            z-index: 6
+            top: 5px
+            right: -15px
+            width: 6px
+            height: 11px
+            background: url('../img/icons/bread-arrow.svg') center center / contain no-repeat
+        &:last-child::after
+            display: none
+
+    &__link
+        font-weight: 500
+        font-size: 13px
+        line-height: 16px
+        color: #FFFFFF
+        white-space: nowrap
+
+/* ================================================ main-text-block*/
+.main-text-block
+    padding: 117px 0
+    &__container
+        p
+            font-weight: 400
+            font-size: 18px
+            line-height: 169%
+            color: #000000
+            margin-bottom: 10px
+
+        h2
+            font-weight: 500
+            font-size: 30px
+            line-height: 37px
+            text-transform: uppercase
+            color: #121417
+            margin-top: 30px
+            margin-bottom: 15px
+
+        h3
+            font-weight: 400
+            font-size: 24px
+            line-height: 33px
+            text-transform: uppercase
+            color: #121417
+            margin-top: 25px
+            margin-bottom: 10px
+
+        img
+            width: 100%
+            height: 400px
+            object-fit: cover
+            padding: 20px 0
+
+        ul
+            padding: 3px 30px
+            li
+                padding: 5px 0
+                position: relative
+                font-weight: 400
+                font-size: 16px
+                line-height: 160%
+                color: #000000
+
+                &::before
+                    content: ''
+                    display: block
+                    position: absolute
+                    width: 7px
+                    height: 7px
+                    border-radius: 100%
+                    background: $color-red
+                    top: 14px
+                    left: -15px
+                    transition: all 0.4s
+                &:hover::before
+                    background: $color-black
+                    transition: all 0.4s
+
+/* ================================================ links-block*/
+.links-block
+    min-height: 276px
+    background: #F3F5F6
+    padding: 84px 0
+
+    &__container
+
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 40px
+        @media (max-width: 692.98px)
+            grid-template-columns: 1fr 1fr
+            gap: 30px
+
+        @media (max-width: 642.98px)
+            grid-template-columns: 1fr
+            gap: 10px
+            row-gap: 30px
+
+    &__item
+
+    &__link
+        font-weight: 500
+        font-size: 20px
+        line-height: 130%
+        text-transform: uppercase
+        color: #000000
+        position: relative
+        white-space: nowrap
+        @media (max-width: 376.98px)
+            font-size: 18px
+        &::after
+            content: ''
+            display: block
+            width: 7px
+            height: 11px
+            background: url('../img/icons/link-arrow.svg') center center / contain no-repeat
+            top: 50%
+            transform: translateY(-50%)
+            right: 0px
+            position: absolute
+            transition: all 0.4s
+            opacity: 0
+            visibility: hidden
+
+        &:hover::after
+            right: -16px
+            transition: all 0.4s
+            opacity: 1
+            visibility: visible
+
+/* ================================================ customers-slider*/
+
+.slider-section
+    &__title
+        font-family: 'Montserrat'
+        font-style: normal
+        font-weight: 500
+        font-size: 30px
+        line-height: 37px
+        text-transform: uppercase
+        color: #121417
+        margin-bottom: 70px
+        @media (max-width: 884.98px)
+            margin-bottom: 150px
+
+.customers-slider
+    position: relative
+
+    &__item-slide
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        @media (max-width: 780.98px)
+            justify-content: space-evenly
+
+    .slick-prev
+        font-size: 0
+        background: transparent
+        border: none
+        width: 70px
+        height: 61px
+        border: 1px solid $color-black
+        border-radius: 20px
+        position: absolute
+        top: -120px
+        right: 100px
+        &::before
+            content: ''
+            display: block
+            margin: 0 auto
+            width: 13px
+            height: 23px
+            background: url('../img/icons/sl-l.svg') center center / cover no-repeat
+
+    .slick-next
+        font-size: 0
+        background: transparent
+        border: none
+        width: 70px
+        height: 61px
+        border: 1px solid #121417
+        border-radius: 20px
+        position: absolute
+        top: -120px
+        right: 0
+        &::before
+            content: ''
+            display: block
+            margin: 0 auto
+            width: 13px
+            height: 23px
+            background: url('../img/icons/sl-r.svg') center center / cover no-repeat

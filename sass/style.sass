@@ -1,0 +1,473 @@
+@import "fonts"
+@import "null"
+@import "select-style"
+@import "bem-block"
+@import "header"
+@import "footer"
+
+/* @import "input-range" Вибір діапазона (input type='range')*/
+
+.main-section
+    min-height: 100vh
+    padding: 100px 0
+    position: relative
+
+    &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(0, 0, 0, 0.3)
+        z-index: 2
+
+    &__img-bg
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        z-index: 1
+        object-fit: cover
+
+    &__container
+        position: relative
+        z-index: 3
+
+    &__title
+        font-weight: 500
+        font-size: 64px
+        line-height: 78px
+        text-transform: uppercase
+        color: #FFFFFF
+        max-width: 830px
+        margin-top: 15vh
+        &_center
+            margin: 0 auto
+            margin-top: 15vh
+            font-weight: 600
+            text-align: center
+
+        @media (max-width: 809.98px)
+            font-size: 45px
+            line-height: 64px
+        @media (max-width: 569.98px)
+            font-size: 34px
+            line-height: 50px
+        @media (max-width: 343.98px)
+            font-size: 29px
+            line-height: 42px
+/* =========================================================== about*/
+
+.about
+    padding: 117px 0
+
+    &__title
+        font-weight: 500
+        font-size: 30px
+        line-height: 37px
+        text-transform: uppercase
+        color: $color-black
+        margin-bottom: 52px
+
+    &__text
+        margin-bottom: 52px
+        p
+            font-weight: 400
+            font-size: 16px
+            line-height: 169.1%
+            text-transform: uppercase
+            color: $color-black
+            margin-bottom: 27px
+            &:last-child
+                margin-bottom: 0
+/* =========================================================== categoty*/
+.categoty
+    display: flex
+    flex-wrap: wrap
+
+    &__img-bg
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        object-fit: cover
+    &__item
+        height: 500px
+        flex: 1 1 50%
+        position: relative
+        padding-top: 305px
+        @media (max-width: 1205.98px)
+            flex: 1 1 100%
+        @media (max-width: 490.98px)
+            height: 440px
+
+        &::after
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background-color: black
+            opacity: 0.2
+            transition: opacity 0.5s ease
+
+        &:hover::after
+            opacity: 0.6
+
+        &:nth-child(2n+1)
+            padding-left: calc( (100% - 1330px + 15px) /2)
+            .categoty__title
+                font-weight: 600
+                font-size: 40px
+                line-height: 49px
+                text-transform: uppercase
+                color: #FFFFFF
+                position: relative
+                top: 0
+                z-index: 10
+                left: 15px
+                display: flex
+                justify-content: flex-start
+                @media (max-width: 468.98px)
+                    font-size: 32px
+                    line-height: 42px
+
+            .categoty__line
+                background: $color-red
+                height: 60px
+                width: 0
+                border-radius: 0px 18px 18px 0px
+                position: absolute
+                left: 0
+                top: 325px
+                z-index: 8
+                transition: all 0.5s
+                @media (max-width: 468.98px)
+                    top: 317px
+
+            .categoty__line-cube
+                width: 30px
+                height: 30px
+                background: #FF5858
+                border-radius: 10px
+                position: absolute
+                right: 15px
+                top: 15px
+                display: flex
+                transition: all 0.5s
+                &::before
+                    content: ''
+                    display: block
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    background: $color-white
+                    z-index: 2
+                    width: 10px
+                    height: 2px
+                    border-radius: 6px
+                    transform: rotate(-45deg) translate(-41%, -61%)
+                &::after
+                    content: ''
+                    display: block
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    background: $color-white
+                    z-index: 2
+                    width: 10px
+                    height: 2px
+                    border-radius: 6px
+                    transform: rotate(-45deg) translate(4px, 4px)
+                    transform: rotate(45deg) translate(-55%,0%)
+
+            &:hover .categoty__line
+                width: 80%
+                @media (max-width: 1375.98px)
+                    width: 70%
+                @media (max-width: 1205.98px)
+                    width: 60%
+                @media (max-width: 765.98px)
+                    width: 70%
+                @media (max-width: 555.98px)
+                    width: 95%
+                @media (min-width: 2517.98px)
+                    width: 95%
+        &:nth-child(2n)
+            padding-right: calc( (100% - 1330px + 15px) /2)
+            .categoty__title
+                font-weight: 600
+                font-size: 40px
+                line-height: 49px
+                text-transform: uppercase
+                color: #FFFFFF
+                position: relative
+                top: 0
+                z-index: 10
+                right: 15px
+                display: flex
+                justify-content: flex-end
+                @media (max-width: 468.98px)
+                    font-size: 32px
+                    line-height: 42px
+
+            .categoty__line
+                background: $color-red
+                height: 60px
+                width: 0
+                border-radius: 18px 0px 0px 18px
+                position: absolute
+                right: 0
+                top: 325px
+                z-index: 8
+                transition: all 0.5s
+                @media (max-width: 468.98px)
+                    top: 317px
+
+            .categoty__line-cube
+                width: 30px
+                height: 30px
+                background: #FF5858
+                border-radius: 10px
+                position: absolute
+                left: 15px
+                top: 15px
+                display: flex
+                transform: rotate(180deg)
+                transition: all 0.5s
+                &::before
+                    content: ''
+                    display: block
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    background: $color-white
+                    z-index: 2
+                    width: 10px
+                    height: 2px
+                    border-radius: 6px
+                    transform: rotate(-45deg) translate(-41%, -61%)
+                &::after
+                    content: ''
+                    display: block
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    background: $color-white
+                    z-index: 2
+                    width: 10px
+                    height: 2px
+                    border-radius: 6px
+                    transform: rotate(45deg) translate(-55%,0%)
+            &:hover .categoty__line
+                width: 80%
+                @media (max-width: 1375.98px)
+                    width: 70%
+                @media (max-width: 1205.98px)
+                    width: 60%
+                @media (max-width: 765.98px)
+                    width: 70%
+                @media (max-width: 555.98px)
+                    width: 95%
+                @media (min-width: 2517.98px)
+                    width: 95%
+
+        // &:nth-child(1)
+        //     //background: url('../img/category/01.jpg') center center / cover no-repeat
+        // &:nth-child(2)
+        //     background: url('../img/category/02.jpg') center center / cover no-repeat
+        // &:nth-child(3)
+        //     background: url('../img/category/03.jpg') center center / cover no-repeat
+        // &:nth-child(4)
+        //     background: url('../img/category/04.jpg') center center / cover no-repeat
+
+    &__link
+        display: block
+        &:hover .categoty__line-cube
+            background: $color-white
+            transition: background 0.4s
+            &::before, &::after
+                background: $color-red
+                transition: background 0.4s
+
+/* =========================================================== decision*/
+.decision
+    //background: url(../img/decision-bg.jpg) center center / cover no-repeat
+    min-height: 700px
+    height: 100%
+    position: relative
+    padding: 209px 0 30px
+
+    &__img-bg
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        object-fit: cover
+
+    @media (max-width: 466.98px)
+        padding: 129px 0 10px
+        min-height: 600px
+
+    &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(0, 0, 0, 0.2)
+
+    &__container
+
+        position: relative
+        z-index: 2
+
+    &__title
+        font-weight: 500
+        font-size: 30px
+        line-height: 37px
+        text-transform: uppercase
+        color: #FFFFFF
+        margin-bottom: 52px
+
+    &__descr
+        font-weight: 400
+        font-size: 16px
+        line-height: 169%
+        text-transform: uppercase
+        color: #FFFFFF
+        margin-bottom: 52px
+        max-width: 860px
+
+    &__btn
+
+/* =========================================================== brands*/
+.brands
+    padding: 117px 0 10px 0
+
+    &__header
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+        margin-bottom: 70px
+        @media (max-width: 884.98px)
+            margin-bottom: 40px
+
+    &__title
+        font-weight: 500
+        font-size: 30px
+        line-height: 37px
+        text-transform: uppercase
+        color: #121417
+
+    &__link
+        font-weight: 400
+        font-size: 16px
+        line-height: 120%
+        text-transform: uppercase
+        color: #121417
+        position: relative
+        padding-right: 25px
+
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            width: 21px
+            height: 21px
+            background: url('../img/icons/arrow-r.svg') center center / cover no-repeat
+            top: 2px
+            right: 0
+            transform: rotate(-45deg)
+            transition: all 0.4s
+
+        &:hover::after
+            transform: rotate(0deg)
+
+    &__body
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-evenly
+
+    &__item
+        width: 250px
+        height: 250px
+        overflow: hidden
+        img
+            width: 100%
+            height: 100%
+            object-fit: contain
+            transition: all 0.4s
+            &:hover
+                transform: scale(1.1)
+
+/* =========================================================== question*/
+.question
+
+    &__container
+        padding: 117px 0
+        display: flex
+        flex-direction: column
+        align-items: center
+        @media (max-width: 696.98px)
+            padding: 58px 0
+
+    &__title
+        font-weight: 500
+        font-size: 30px
+        line-height: 37px
+        text-transform: uppercase
+        color: #121417
+        margin-bottom: 34px
+        text-align: center
+
+    &__text
+        font-weight: 500
+        font-size: 15px
+        line-height: 18px
+        text-transform: uppercase
+        color: #121417
+        margin-bottom: 34px
+        text-align: center
+
+.progressbar
+    height: 70px
+    width: 70px
+    border-radius: 100%
+    background: $color-black
+    position: fixed
+    z-index: 886
+    transform: rotate(90deg)
+    overflow: hidden
+    right: 5%
+    bottom: 100px
+
+    .progressbar-line
+        height: 70px
+        width: 0
+        background: $color-red
+        z-index: 887
+    svg
+        position: absolute
+        z-index: 888
+        top: 25px
+        left: 10px
+        width: 20px
+        height: 20px
+
+        animation-name: move
+        animation: move 2s ease-in-out infinite
+
+@keyframes move
+    0%
+        transform: translateX(0) rotate(-90deg)
+
+    100%
+        transform: translateX(100%) rotate(-90deg)

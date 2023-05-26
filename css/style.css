@@ -1205,6 +1205,8 @@ button {
   background: #FA1111;
   z-index: 42;
   border-radius: 100%;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 .progressbar-wrapper .progressbar svg {
   position: absolute;
@@ -1228,6 +1230,13 @@ button {
   background: url("../img/scroll-down.svg") center center/cover no-repeat;
   -webkit-animation: rotate 6s linear infinite;
           animation: rotate 6s linear infinite;
+}
+
+.go-up {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 @-webkit-keyframes rotate {

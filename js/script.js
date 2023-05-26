@@ -20,6 +20,27 @@ function fillProgressLine() {
 fillProgressLine();
 
 
+window.addEventListener('scroll', function () {
+  const element = document.querySelector('.progressbar-line');
+  const scrollHeight = document.body.scrollHeight;
+  const currentScroll = window.pageYOffset + window.innerHeight + 400;
+  if (currentScroll >= scrollHeight) {
+    element.classList.add('go-up');
+  }
+
+   if (currentScroll <= scrollHeight) {
+    element.classList.remove('go-up');
+  }
+  console.log(scrollHeight);
+  console.log(currentScroll);
+
+  console.log(innerHeight);
+
+
+  
+});
+
+
 
 
 /* =========================================================== Добавление номерации для елементов меню */

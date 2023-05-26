@@ -784,6 +784,7 @@
     bottom: 100px
     height: 70px
     width: 70px
+
     .progressbar
         height: 70px
         width: 70px
@@ -798,6 +799,7 @@
             background: $color-red
             z-index: 42
             border-radius: 100%
+            transition: all 0.4s
         svg
             position: absolute
             z-index: 44
@@ -818,7 +820,9 @@
         z-index: 41
         background: url('../img/scroll-down.svg') center center / cover no-repeat
         animation: rotate 6s linear infinite
-
+.go-up
+    transform: rotate(180deg)
+    transition: all 0.4s
 @keyframes rotate
     0%
         transform: rotate(-360deg)

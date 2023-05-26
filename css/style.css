@@ -1182,57 +1182,73 @@ button {
 }
 
 /* ================================================ progressbar*/
-.progressbar {
+.progressbar-wrapper {
+  position: fixed;
+  z-index: 40;
+  right: 5%;
+  bottom: 100px;
+  height: 70px;
+  width: 70px;
+}
+.progressbar-wrapper .progressbar {
   height: 70px;
   width: 70px;
   border-radius: 100%;
   background: #121417;
-  position: fixed;
-  z-index: 40;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   overflow: hidden;
-  right: 5%;
-  bottom: 100px;
 }
-.progressbar .progressbar-line {
+.progressbar-wrapper .progressbar .progressbar-line {
   height: 70px;
   width: 0;
   background: #FA1111;
   z-index: 42;
+  border-radius: 100%;
 }
-.progressbar svg {
+.progressbar-wrapper .progressbar svg {
   position: absolute;
   z-index: 44;
-  top: 25px;
-  left: 10px;
+  top: 24px;
+  left: 24px;
   width: 20px;
   height: 20px;
-  -webkit-animation-name: move;
-          animation-name: move;
-  -webkit-animation: move 2s ease-in-out infinite;
-          animation: move 2s ease-in-out infinite;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+.progressbar-wrapper::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  top: -10px;
+  left: -10px;
+  z-index: 41;
+  background: url("../img/scroll-down.svg") center center/cover no-repeat;
+  -webkit-animation: rotate 6s linear infinite;
+          animation: rotate 6s linear infinite;
 }
 
-@-webkit-keyframes move {
+@-webkit-keyframes rotate {
   0% {
-    -webkit-transform: translateX(0) rotate(-90deg);
-            transform: translateX(0) rotate(-90deg);
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
   }
   100% {
-    -webkit-transform: translateX(100%) rotate(-90deg);
-            transform: translateX(100%) rotate(-90deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 
-@keyframes move {
+@keyframes rotate {
   0% {
-    -webkit-transform: translateX(0) rotate(-90deg);
-            transform: translateX(0) rotate(-90deg);
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
   }
   100% {
-    -webkit-transform: translateX(100%) rotate(-90deg);
-            transform: translateX(100%) rotate(-90deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 /* ======================================header */

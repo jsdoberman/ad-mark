@@ -20,7 +20,13 @@
   font-style: normal;
   font-display: swap;
 }
-/*  */
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/Arial-Mdm.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 *,
 *::before,
 *::after {
@@ -612,7 +618,7 @@ button {
   left: 9px;
 }
 .main-menu__title {
-  font-family: Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
   font-weight: 500;
   font-size: 96px;
   line-height: 120%;
@@ -1175,6 +1181,60 @@ button {
   background: url("../img/icons/sl-r.svg") center center/cover no-repeat;
 }
 
+/* ================================================ progressbar*/
+.progressbar {
+  height: 70px;
+  width: 70px;
+  border-radius: 100%;
+  background: #121417;
+  position: fixed;
+  z-index: 40;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  overflow: hidden;
+  right: 5%;
+  bottom: 100px;
+}
+.progressbar .progressbar-line {
+  height: 70px;
+  width: 0;
+  background: #FA1111;
+  z-index: 42;
+}
+.progressbar svg {
+  position: absolute;
+  z-index: 44;
+  top: 25px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  -webkit-animation-name: move;
+          animation-name: move;
+  -webkit-animation: move 2s ease-in-out infinite;
+          animation: move 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes move {
+  0% {
+    -webkit-transform: translateX(0) rotate(-90deg);
+            transform: translateX(0) rotate(-90deg);
+  }
+  100% {
+    -webkit-transform: translateX(100%) rotate(-90deg);
+            transform: translateX(100%) rotate(-90deg);
+  }
+}
+
+@keyframes move {
+  0% {
+    -webkit-transform: translateX(0) rotate(-90deg);
+            transform: translateX(0) rotate(-90deg);
+  }
+  100% {
+    -webkit-transform: translateX(100%) rotate(-90deg);
+            transform: translateX(100%) rotate(-90deg);
+  }
+}
 /* ======================================header */
 .header {
   padding: 30px 0;
@@ -1937,58 +1997,4 @@ button {
   color: #121417;
   margin-bottom: 34px;
   text-align: center;
-}
-
-.progressbar {
-  height: 70px;
-  width: 70px;
-  border-radius: 100%;
-  background: #121417;
-  position: fixed;
-  z-index: 886;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  overflow: hidden;
-  right: 5%;
-  bottom: 100px;
-}
-.progressbar .progressbar-line {
-  height: 70px;
-  width: 0;
-  background: #FA1111;
-  z-index: 887;
-}
-.progressbar svg {
-  position: absolute;
-  z-index: 888;
-  top: 25px;
-  left: 10px;
-  width: 20px;
-  height: 20px;
-  -webkit-animation-name: move;
-          animation-name: move;
-  -webkit-animation: move 2s ease-in-out infinite;
-          animation: move 2s ease-in-out infinite;
-}
-
-@-webkit-keyframes move {
-  0% {
-    -webkit-transform: translateX(0) rotate(-90deg);
-            transform: translateX(0) rotate(-90deg);
-  }
-  100% {
-    -webkit-transform: translateX(100%) rotate(-90deg);
-            transform: translateX(100%) rotate(-90deg);
-  }
-}
-
-@keyframes move {
-  0% {
-    -webkit-transform: translateX(0) rotate(-90deg);
-            transform: translateX(0) rotate(-90deg);
-  }
-  100% {
-    -webkit-transform: translateX(100%) rotate(-90deg);
-            transform: translateX(100%) rotate(-90deg);
-  }
 }/*# sourceMappingURL=style.css.map */

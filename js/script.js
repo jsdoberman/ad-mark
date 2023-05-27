@@ -26,10 +26,12 @@ window.addEventListener('scroll', function () {
   const currentScroll = window.pageYOffset + window.innerHeight + 400;
   if (currentScroll >= scrollHeight) {
     element.classList.add('go-up');
+	
   }
 
    if (currentScroll <= scrollHeight) {
     element.classList.remove('go-up');
+	
   }
   console.log(scrollHeight);
   console.log(currentScroll);

@@ -1,6 +1,7 @@
 
 /* ================================================ btn-white*/
 .btn-white
+    font-family: 'Montserrat'
     height: 60px
     background: #FFFFFF
     border-radius: 22px
@@ -73,6 +74,7 @@
     cursor: pointer
     transition: background 0.4s
     white-space: nowrap
+    font-family: 'Montserrat'
 
     &:hover .btn-red__arrow
         background: $color-white
@@ -135,6 +137,7 @@
     cursor: pointer
     transition: background 0.4s
     white-space: nowrap
+    font-family: 'Montserrat'
 
     &:hover .btn-black__arrow
         background: $color-white
@@ -202,7 +205,7 @@
     &__item
         transition: all 0.4s
         width: 60px
-        height: 3px
+        height: 1px
         background: #fff
         @media (max-width: 352.98px)
             width: 40px
@@ -218,6 +221,12 @@
     top: 0
     left: 0
     transition: all 0.4s
+    -ms-overflow-style: none
+    scrollbar-width: none
+
+    &::-webkit-scrollbar
+        width: 0
+        height: 0
 
     &__container
         padding: 50px 15px 70px 15px
@@ -275,7 +284,7 @@
             background: #000
             color: #fff
             padding: 2px
-            border-radius: 10px
+            border-radius: 7px
             width: 35px
             height: 25px
             display: flex
@@ -385,13 +394,19 @@
     background: rgba(0, 0, 0, 0.4)
     overflow: auto
     transition: all 0.4s
+    -ms-overflow-style: none
+    scrollbar-width: none
+
+    &::-webkit-scrollbar
+        width: 0
+        height: 0
 
     &__block
         max-width: 1060px
         min-height: 432px
         background: #FFFFFF
         border-radius: 20px
-        margin: 100px auto
+        margin: 20vh auto
         overflow: hidden
         padding-top: 50px
         border: 1px solid #000
@@ -427,6 +442,7 @@
             transform: rotate(180deg)
 
     &__title
+        font-family: 'Montserrat'
         font-weight: 500
         font-size: 30px
         line-height: 37px
@@ -551,6 +567,7 @@
                 color: #121417
 
     &__btn
+        font-family: 'Montserrat'
         background: #121417
         //border-radius: 0px 0px 20px 20px
         height: 65px
@@ -661,7 +678,7 @@
 
 /* ================================================ links-block*/
 .links-block
-    min-height: 276px
+    //min-height: 276px
     background: #F3F5F6
     padding: 84px 0
 
@@ -671,6 +688,7 @@
         display: grid
         grid-template-columns: 1fr 1fr 1fr
         gap: 40px
+        justify-items: center
         @media (max-width: 692.98px)
             grid-template-columns: 1fr 1fr
             gap: 30px

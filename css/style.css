@@ -157,6 +157,7 @@ button {
 
 /* ================================================ btn-white*/
 .btn-white {
+  font-family: "Montserrat";
   height: 60px;
   background: #FFFFFF;
   border-radius: 22px;
@@ -247,6 +248,7 @@ button {
   -webkit-transition: background 0.4s;
   transition: background 0.4s;
   white-space: nowrap;
+  font-family: "Montserrat";
 }
 .btn-red:hover .btn-red__arrow {
   background: #FFFFFF;
@@ -322,6 +324,7 @@ button {
   -webkit-transition: background 0.4s;
   transition: background 0.4s;
   white-space: nowrap;
+  font-family: "Montserrat";
 }
 .btn-black:hover .btn-black__arrow {
   background: #FFFFFF;
@@ -407,7 +410,7 @@ button {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   width: 60px;
-  height: 3px;
+  height: 1px;
   background: #fff;
 }
 @media (max-width: 352.98px) {
@@ -428,6 +431,12 @@ button {
   left: 0;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.menu::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 .menu__container {
   padding: 50px 15px 70px 15px;
@@ -514,7 +523,7 @@ button {
   background: #000;
   color: #fff;
   padding: 2px;
-  border-radius: 10px;
+  border-radius: 7px;
   width: 35px;
   height: 25px;
   display: -webkit-box;
@@ -671,13 +680,19 @@ button {
   overflow: auto;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.popup-contact-form::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 .popup-contact-form__block {
   max-width: 1060px;
   min-height: 432px;
   background: #FFFFFF;
   border-radius: 20px;
-  margin: 100px auto;
+  margin: 20vh auto;
   overflow: hidden;
   padding-top: 50px;
   border: 1px solid #000;
@@ -730,6 +745,7 @@ button {
           transform: rotate(180deg);
 }
 .popup-contact-form__title {
+  font-family: "Montserrat";
   font-weight: 500;
   font-size: 30px;
   line-height: 37px;
@@ -922,6 +938,7 @@ button {
   color: #121417;
 }
 .contact-form__btn {
+  font-family: "Montserrat";
   background: #121417;
   height: 65px;
   width: 100%;
@@ -1043,7 +1060,6 @@ button {
 
 /* ================================================ links-block*/
 .links-block {
-  min-height: 276px;
   background: #F3F5F6;
   padding: 84px 0;
 }
@@ -1051,6 +1067,7 @@ button {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
+  justify-items: center;
 }
 @media (max-width: 692.98px) {
   .links-block__wrapper {
@@ -1493,12 +1510,13 @@ button {
   z-index: 3;
 }
 .main-section__title {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 64px;
   line-height: 78px;
   text-transform: uppercase;
   color: #FFFFFF;
   max-width: 830px;
+  margin: 0 auto;
   margin-top: 15vh;
 }
 .main-section__title_center {
@@ -1944,19 +1962,17 @@ button {
   content: "";
   display: block;
   position: absolute;
-  width: 21px;
-  height: 21px;
-  background: url("../img/icons/arrow-r.svg") center center/cover no-repeat;
-  top: 2px;
+  width: 18px;
+  height: 18px;
+  background: url("../img/icons/arrow-r.svg") center center/contain no-repeat;
+  top: 0px;
   right: 0;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 .brands__link:hover::after {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 .brands__body {
   display: -webkit-box;
@@ -1972,6 +1988,15 @@ button {
   width: 250px;
   height: 250px;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .brands__item img {
   width: 100%;

@@ -41,7 +41,6 @@ html, body {
   margin: 0;
   padding: 0;
   overflow: auto;
-  scroll-behavior: smooth;
 }
 
 ul, li, p {
@@ -955,9 +954,11 @@ button {
 
 /* ================================================ .breadcrumb*/
 .breadcrumb {
-  position: relative;
+  position: absolute;
   z-index: 5;
-  margin-top: 80px;
+  width: 100%;
+  top: 170px;
+  left: 15px;
   overflow: auto;
   scrollbar-width: none;
 }

@@ -41,6 +41,7 @@ html, body {
   margin: 0;
   padding: 0;
   overflow: auto;
+  scroll-behavior: smooth;
 }
 
 ul, li, p {
@@ -518,6 +519,8 @@ button {
   line-height: 20px;
   text-transform: uppercase;
   color: #121417;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .menu__leng-name_active {
   background: #000;
@@ -535,6 +538,8 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .menu__soc {
   display: -webkit-box;
@@ -692,7 +697,6 @@ button {
   min-height: 432px;
   background: #FFFFFF;
   border-radius: 20px;
-  margin: 20vh auto;
   overflow: hidden;
   padding-top: 50px;
   border: 1px solid #000;
@@ -1482,7 +1486,7 @@ button {
 /* @import "input-range" Вибір діапазона (input type='range')*/
 .main-section {
   min-height: 100vh;
-  padding: 100px 0;
+  padding: 1px 0;
   position: relative;
 }
 .main-section::after {
@@ -1508,6 +1512,13 @@ button {
 .main-section__container {
   position: relative;
   z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
 }
 .main-section__title {
   font-weight: 400;
@@ -1516,8 +1527,6 @@ button {
   text-transform: uppercase;
   color: #FFFFFF;
   max-width: 830px;
-  margin: 0 auto;
-  margin-top: 15vh;
 }
 .main-section__title_center {
   margin: 0 auto;

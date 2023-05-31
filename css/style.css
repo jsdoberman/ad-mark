@@ -421,22 +421,16 @@ button {
 
 /* ================================================== menu*/
 .menu {
-  background: #121417;
+  background: red;
   height: 0;
   overflow: hidden;
   position: fixed;
-  z-index: 1000;
+  z-index: 2000;
   width: 100%;
   top: 0;
   left: 0;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.menu::-webkit-scrollbar {
-  width: 0;
-  height: 0;
 }
 .menu__container {
   padding: 50px 15px 70px 15px;

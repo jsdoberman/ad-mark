@@ -213,12 +213,13 @@
 /* ================================================== menu*/
 .menu
     background: green
-    height: 100vh
+    height: 0
     overflow: hidden
     position: fixed
+    opacity: 0
     z-index: 1000
     width: 100%
-    top: -100%
+    top: 0
     left: 0
     transition: all 0.4s
     -ms-overflow-style: none
@@ -328,9 +329,10 @@
             &:nth-child(2)
                 transform: rotate(-45deg)
 .menu_active
-    top: 0
+    height: 100vh
     transition: all 0.4s
     overflow: auto
+    opacity: 1
 
 .main-menu
     display: grid

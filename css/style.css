@@ -422,12 +422,13 @@ button {
 /* ================================================== menu*/
 .menu {
   background: green;
-  height: 100vh;
+  height: 0;
   overflow: hidden;
   position: fixed;
+  opacity: 0;
   z-index: 1000;
   width: 100%;
-  top: -100%;
+  top: 0;
   left: 0;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
@@ -593,10 +594,11 @@ button {
 }
 
 .menu_active {
-  top: 0;
+  height: 100vh;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   overflow: auto;
+  opacity: 1;
 }
 
 .main-menu {

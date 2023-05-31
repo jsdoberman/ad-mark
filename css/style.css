@@ -421,16 +421,22 @@ button {
 
 /* ================================================== menu*/
 .menu {
-  background: red;
-  height: 0;
+  background: green;
+  height: 100vh;
   overflow: hidden;
   position: fixed;
-  z-index: 2000;
+  z-index: 1000;
   width: 100%;
-  top: 0;
+  top: -100%;
   left: 0;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.menu::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 .menu__container {
   padding: 50px 15px 70px 15px;
@@ -587,7 +593,7 @@ button {
 }
 
 .menu_active {
-  height: 100vh;
+  top: 0;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   overflow: auto;
